@@ -69,7 +69,7 @@ public class CircleQueueDriver {
 	
 	{	
 		Scanner keyboard = new Scanner(System.in);
-		System.out.println("Enter 1 for selection sort, enter any number key for insertion sort");
+		System.out.println("Enter 1 for selection sort, enter any number for insertion sort");
 		int option = keyboard.nextInt();
 		
 		//queue
