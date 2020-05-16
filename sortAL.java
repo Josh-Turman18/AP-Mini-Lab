@@ -6,7 +6,7 @@ public class sortAL {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public void SelectionSort(ArrayList<Object> list)
+	public void selectionSort(ArrayList<Object> list)
 	{
 		int first;
 		Object temp;

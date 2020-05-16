@@ -3,7 +3,7 @@ import java.util.*;
 public class CircleQueueAL {
 
 	// array list that will hold the objects in order
-	public ArrayList<Object> list = new ArrayList<Object>();
+	public static ArrayList<Object> list = new ArrayList<Object>();
 	public int count;
 	
 	/*
@@ -34,6 +34,7 @@ public class CircleQueueAL {
 		System.out.println("First Element: " + list.get(0));
 		System.out.println("Last Element: " + list.get((this.count) - 1));
 		System.out.println("Full ArrayList: " + list);
+		System.out.println();
 	}
 	
 	// deletes all the elements for the ArrayList
@@ -51,6 +52,7 @@ public class CircleQueueAL {
 	public static void main(String[] args)
 	{
 		CircleQueueAL trial = new CircleQueueAL();
+		sortAL sorting = new sortAL();
 		
 		// added objects to the ArrayList
 		trial.addElement(Animal.animalData());
@@ -66,6 +68,13 @@ public class CircleQueueAL {
 		Cupcakes.key = Cupcakes.KeyType.flavor;
 		Alphabet.key = Alphabet.KeyType.letter;
 		Classroom.key = Classroom.KeyType.subject;  // changed the key in Classroom to the class's subject
+		
+		// sorts the ArrayList using the selection sort method
+		sorting.selectionSort(list);
+		
+		// displays the sorted list
+		System.out.println("Sorted ArrayList: ");
+		trial.showAList();
 		
 		// delete the ArrayList's elements
 		trial.deleteList();
