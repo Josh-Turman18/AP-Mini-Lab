@@ -1,4 +1,5 @@
- 
+import java.util.Scanner; 
+
 /**
  * Circle Queue Driver takes a list of Objects and puts them into a Queue
  * @author     John Mortensen
@@ -66,32 +67,67 @@ public class CircleQueueDriver {
 	 */
 	public static void main(String[] args)
 	
-	{			
-		//queue
-		CircleQueueDriver trial = new CircleQueueDriver();
+	{	
+		System.out.println("Enter 1 for insertion sort or 2 for selection sort");
+		Scanner keyboard = new Scanner(System.in);
+		int option = keyboard.nextInt();
 		
-		//add different types of objects to the same opaque queue
-		trial.addCQueue(Animal.animalData());
-		trial.addCQueue(Cupcakes.cupCakeData());
-		trial.addCQueue(Alphabet.alphabetData());		
-		//display queue objects in queue order
-		trial.showCQueue();
+		if(option == 1)
+		{
+			//queue
+			CircleQueueDriver trial = new CircleQueueDriver();
 		
-		//sort queue objects by specific element within the object and display in sort order
-		Animal.key = Animal.KeyType.name;
-		Cupcakes.key = Cupcakes.KeyType.flavor;
-		Alphabet.key = Alphabet.KeyType.letter;
-		trial.cqueue.insertionSort();
-		trial.showCQueue();
+			//add different types of objects to the same opaque queue
+			trial.addCQueue(Animal.animalData());
+			trial.addCQueue(Cupcakes.cupCakeData());
+			trial.addCQueue(Alphabet.alphabetData());		
+			//display queue objects in queue order
+			trial.showCQueue();
 		
-		//display queue objects
-		Animal.key = Animal.KeyType.combo;
-		Cupcakes.key = Cupcakes.KeyType.combo;
-		Alphabet.key = Alphabet.KeyType.combo;
-		trial.showCQueue();
+			//sort queue objects by specific element within the object and display in sort order
+			Animal.key = Animal.KeyType.name;
+			Cupcakes.key = Cupcakes.KeyType.flavor;
+			Alphabet.key = Alphabet.KeyType.letter;
+			trial.cqueue.insertionSort();
+			trial.showCQueue();
+			
+			//display queue objects
+			Animal.key = Animal.KeyType.combo;
+			Cupcakes.key = Cupcakes.KeyType.combo;
+			Alphabet.key = Alphabet.KeyType.combo;
+			trial.showCQueue();
+			
+			//delete queue objects
+			trial.deleteCQueue();
+		}
+		else
+		{
+			//queue
+			CircleQueueDriver trial = new CircleQueueDriver();
 		
-		//delete queue objects
-		trial.deleteCQueue();
+			//add different types of objects to the same opaque queue
+			trial.addCQueue(Animal.animalData());
+			trial.addCQueue(Cupcakes.cupCakeData());
+			trial.addCQueue(Alphabet.alphabetData());		
+			//display queue objects in queue order
+			trial.showCQueue();
+		
+			//sort queue objects by specific element within the object and display in sort order
+			Animal.key = Animal.KeyType.name;
+			Cupcakes.key = Cupcakes.KeyType.flavor;
+			Alphabet.key = Alphabet.KeyType.letter;
+			trial.cqueue.selectionSort();
+			trial.showCQueue();
+			
+			//display queue objects
+			Animal.key = Animal.KeyType.combo;
+			Cupcakes.key = Cupcakes.KeyType.combo;
+			Alphabet.key = Alphabet.KeyType.combo;
+			trial.showCQueue();
+			
+			//delete queue objects
+			trial.deleteCQueue();
+		}
 	}
 	
 }
