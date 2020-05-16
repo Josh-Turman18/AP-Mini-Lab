@@ -3,14 +3,13 @@ import java.util.*;
 public class CircleQueueAL {
 
 	// array list that will hold the objects in order
-	public ArrayList<Object> list;
+	public ArrayList<Object> list = new ArrayList<Object>();
 	public int count;
 	
 	/*
 	 * constructor
 	 */
 	public CircleQueueAL() {
-		list = null;
 		count = 0;
 	}
 	
@@ -22,7 +21,7 @@ public class CircleQueueAL {
 		for (Object o : objects)
 		{
 			list.add(o);
-			System.out.println("Add: " + objects[i++]);
+			System.out.println("Add: " + o.toString() + " -- " + list);
 			this.count++;
 		}
 		System.out.println();
@@ -42,7 +41,7 @@ public class CircleQueueAL {
 	{
 		while(list != null)
 		{
-			System.out.print("Delete " + list.get(0) + " : ");
+			System.out.print("Delete: " + list.get(0) + " : ");
 			list.remove(0);
 			System.out.println(list);
 		}
