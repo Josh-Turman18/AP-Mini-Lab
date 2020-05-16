@@ -47,5 +47,20 @@ public class CircleQueueAL {
 			System.out.println(list);
 		}
 	}
+	
+	// run the CircleQueueAL class
+	public static void main(String[] args)
+	{
+		CircleQueueAL trial = new CircleQueueAL();
+		
+		// added objects to the ArrayList
+		trial.addElement(Animal.animalData());
+		trial.addElement(Cupcakes.cupCakeData());
+		trial.addElement(Alphabet.alphabetData());
+		trial.addElement(Classroom.classroomData());
+		
+		// displays the ArrayList
+		trial.showAList();
+	}
 
 }
