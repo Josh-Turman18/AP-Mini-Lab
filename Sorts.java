@@ -176,3 +176,14 @@ public class Sorts
         System.out.println(is);
     }
 }
+
+/*
+ * Assessment:
+ * Looking at the tables (found on pdf), it is clear that the selection sort is the most efficient of these three methods.
+ * Selection sort performed the same amount of operations each trial, no matter how un-organized the array was. This is
+ * because when using selection sort, a swap only occurs when the lowest (or highest) value in the array is found. The next
+ * most efficient would be insertion. Insertion can take less operations that selection, but this is only if the array starts
+ * out more organized. On average, insertion takes more operations than selection, thus making it less efficient on average.
+ * The least efficient is clearly bubble sort. It's average operations were about 600 more than the other methods or sorting.
+ * 
+ */
