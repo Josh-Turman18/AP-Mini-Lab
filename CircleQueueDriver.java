@@ -67,7 +67,12 @@ public class CircleQueueDriver {
 	 */
 	public static void main(String[] args)
 	
-	{	//queue
+	{	
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Enter 1 for selection sort, press any other key for insertion sort");
+		int option = keyboard.nextInt();
+		
+		//queue
 		CircleQueueDriver trial = new CircleQueueDriver();
 		
 		//add different types of objects to the same opaque queue
@@ -81,7 +86,16 @@ public class CircleQueueDriver {
 		Animal.key = Animal.KeyType.name;
 		Cupcakes.key = Cupcakes.KeyType.flavor;
 		Alphabet.key = Alphabet.KeyType.letter;
-		trial.cqueue.insertionSort();			
+		if(option == 1)
+		{	
+			System.out.println("SELECTION SORT:");
+			trial.cqueue.selectionSort();
+		}
+		else
+		{
+			System.out.println("INSERTION SORT:");
+			trial.cqueue.insertionSort();
+		}
 		trial.showCQueue();
 		//display queue objects
 		Animal.key = Animal.KeyType.combo;
