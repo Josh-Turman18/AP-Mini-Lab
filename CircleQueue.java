@@ -204,6 +204,27 @@ public class CircleQueue
     	node2 = node2.getNext();
     } 
     
-  } 
+  }
+  
+  public void selectionSort()
+  {
+	  LinkedList temp = headNode;
+	  
+	  while(temp != null)
+	  {
+		  //two nodes needed for selection sort indexes
+		  LinkedList node1 = temp;
+		  LinkedList node2 = temp.getNext();
+		  
+		  while(node2 != null)
+		  {
+			  if(true)
+			  {
+				  
+			  }
+			  node2 = node2.getNext();
+		  }
+	  }
+  }
   
 }
