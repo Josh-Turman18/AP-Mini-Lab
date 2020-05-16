@@ -44,6 +44,7 @@ public class Classroom extends Generics
 	}
 	
 	/* Initialize Classroom data
+	 * returns an array of data
 	 * 
 	 */
 	public static Generics[] classroomData() {
