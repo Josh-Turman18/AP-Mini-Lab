@@ -218,12 +218,16 @@ public class CircleQueue
 		  
 		  while(node2 != null)
 		  {
-			  if(true)
+			  if(node1.getObject().toString().compareTo(node2.getObject().toString()) > 0)
 			  {
-				  
+				  node1 = node2;
 			  }
 			  node2 = node2.getNext();
 		  }
+		  
+		  LinkedList x = temp;
+		  temp.setObject(node1.getObject());
+		  node1.setObject(x.getObject());
 	  }
   }
   
