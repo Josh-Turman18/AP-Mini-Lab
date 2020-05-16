@@ -129,6 +129,22 @@ public class Sorts
     
     private int[] SelectionSort()
     {
+    	int first, temp;
+    	// iterate list, one less than length
+    	for(int i = slist.length - 1 ; i > 0 ; i--)
+    	{
+    		first = 0;
+    		for(int j = 1 ; j <= i ; j++)
+    		{
+    			if(slist[j] > slist[first])
+    			{
+    				first = j;
+    			}
+    		}
+    		temp = slist[first];
+    		slist[first] = slist[i];
+    		slist[i] = temp;
+    	}
     	return slist;
     }
     /**
