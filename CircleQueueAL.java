@@ -61,6 +61,12 @@ public class CircleQueueAL {
 		// displays the ArrayList
 		trial.showAList();
 		
+		// change the keys for each object
+		Animal.key = Animal.KeyType.name;
+		Cupcakes.key = Cupcakes.KeyType.flavor;
+		Alphabet.key = Alphabet.KeyType.letter;
+		Classroom.key = Classroom.KeyType.subject;  // changed the key in Classroom to the class's subject
+		
 		// delete the ArrayList's elements
 		trial.deleteList();
 		
