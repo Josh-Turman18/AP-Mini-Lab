@@ -39,9 +39,9 @@ public class CircleQueueAL {
 	// deletes all the elements for the ArrayList
 	public void deleteList()
 	{
-		while(list != null)
+		while(list.size() > 0)
 		{
-			System.out.print("Delete: " + list.get(0) + " : ");
+			System.out.print("Delete: " + list.get(0) + " -- ");
 			list.remove(0);
 			System.out.println(list);
 		}
@@ -60,6 +60,10 @@ public class CircleQueueAL {
 		
 		// displays the ArrayList
 		trial.showAList();
+		
+		// delete the ArrayList's elements
+		trial.deleteList();
+		
 	}
 
 }
