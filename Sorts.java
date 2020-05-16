@@ -7,7 +7,7 @@
  */
 public class Sorts
 {
-    enum ListType {Standard, Bubble, Insert};
+    enum ListType {Standard, Bubble, Insert, Selection};
     ListType listType = ListType.Standard;
     
     private int[] list;
@@ -49,12 +49,18 @@ public class Sorts
                 list = this.blist;
                 break;
             case Insert:
-            default:
                 System.out.println("Insertions Sort -- "
                   + " Operations: " + (this.icompares + this.iswaps)
                   + " Compares: " + this.icompares
                   + " Swaps: " + this.iswaps);
                 list = this.ilist;
+            case Selection:
+            default:
+            	System.out.println("Selection Sort -- "
+                        + " Operations: " + (this.scompares + this.sswaps)
+                        + " Compares: " + this.scompares
+                        + " Swaps: " + this.sswaps);
+                      list = this.slist;
         }
                 
         String output = "[";
@@ -136,6 +142,10 @@ public class Sorts
         
         // Insertion Sort
         is.listType = ListType.Insert;
+        System.out.println(is);
+        
+        // Selection Sort
+        is.listType = ListType.Selection;
         System.out.println(is);
     }
 }
