@@ -133,7 +133,12 @@ public class Sorts
     	// iterate list, one less than length
     	for(int i = slist.length - 1 ; i > 0 ; i--)
     	{
+    		// selection sort key logic
     		first = 0;
+    		
+    		// analytics
+    		this.scompares++;  // compare counter
+    		
     		for(int j = 1 ; j <= i ; j++)
     		{
     			if(slist[j] > slist[first])
@@ -144,6 +149,8 @@ public class Sorts
     		temp = slist[first];
     		slist[first] = slist[i];
     		slist[i] = temp;
+    		// analytics
+    		this.sswaps++;  // swap counter
     	}
     	return slist;
     }
