@@ -81,26 +81,8 @@ public class CircleQueueDriver {
 		Animal.key = Animal.KeyType.name;
 		Cupcakes.key = Cupcakes.KeyType.flavor;
 		Alphabet.key = Alphabet.KeyType.letter;
-		
-		// input for sort
-		System.out.println("Enter 1 for insertion sort or 2 for selection sort");
-		Scanner keyboard = new Scanner(System.in);
-		int option = keyboard.nextInt();
-		
-		// sorts with either insertion sort of selection sort
-		if(option == 1)
-		{	
-			System.out.println("INSERTION SORT METHOD:");
-			trial.cqueue.insertionSort();	
-		}
-		else
-		{
-			System.out.println("SELECTION SORT METHOD:");
-			trial.cqueue.selectionSort();
-		}
-		
+		trial.cqueue.insertionSort();			
 		trial.showCQueue();
-		
 		//display queue objects
 		Animal.key = Animal.KeyType.combo;
 		Cupcakes.key = Cupcakes.KeyType.combo;
