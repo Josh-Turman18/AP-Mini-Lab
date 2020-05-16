@@ -225,9 +225,9 @@ public class CircleQueue
 			  node2 = node2.getNext();
 		  }
 		  
-		  LinkedList x = temp;
+		  Object x = temp.getObject();
 		  temp.setObject(node1.getObject());
-		  node1.setObject(x.getObject());
+		  node1.setObject(x);
 		  temp = temp.getNext();
 	  }
   }
