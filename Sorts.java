@@ -136,11 +136,11 @@ public class Sorts
     		// selection sort key logic
     		first = 0;
     		
-    		// analytics
-    		this.scompares++;  // compare counter
-    		
     		for(int j = 1 ; j <= i ; j++)
     		{
+    			// analytics
+        		this.scompares++;  // compare counter
+        		
     			if(slist[j] > slist[first])
     			{
     				first = j;
